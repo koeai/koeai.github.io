@@ -1,0 +1,18 @@
+h2 {
+  border-bottom: 2px solid #ee6e73; }
+
+footer {
+  border-top: 1px solid #dddddd;
+  padding: 0.5rem; }
+
+.actor {
+  box-sizing: border-box;
+  display: block;
+  width: 100%; }
+
+.logo {
+  display: block;
+  width: 100%; }
+
+.large-text {
+  font-size: 2rem; }
