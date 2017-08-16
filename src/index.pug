@@ -14,18 +14,28 @@ html
 		meta(name='twitter:site' content='@koeai_sophia')
 		meta(name='twitter:title' content=title)
 		meta(name='twitter:description' content=description)
-		link(href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet')
-		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css')
-		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css')
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.css')
 		link(rel='stylesheet' href='index.css')
 	body
-		img.header(src='/images/header.jpg' alt='header')
-		div.container
+		nav
+			ul
+				li
+					a(href='http://koeai.blog.fc2.com/') Blog
+		img(src='/images/header.jpg' alt='header')
+		main
 			div.row
-				div.one-half.column
+				div.col.col-12
 					h2 About
 					p このサークルは上智大学を拠点に活動を行っている声優愛好会です。ソフィア祭に声優さんを招待してイベントを開催することを目標に2013年12月に設立されました。2014年度ソフィア祭では声優・福圓美里さんをお招きして念願のトークショーを開催することが出来ました。来年、再来年と継続して開催していけることを新たな目標に活動しています。
-				div.one-half.column
-					h2 Event
-					ul
-						li 2016年11月3日　#[a(href='/event/20161103/') 明坂聡美トークショーinソフィア祭　〜in あけこだよ！in四ツ谷〜]
+			div.row
+				div.col.col-6
+					h2 News
+					ul.news
+				div.col.col-6
+					h2 Twitter
+					a.twitter-timeline(href='https://twitter.com/koeai_sophia' data-widget-id='437990586356731904') @koeai_sophia からのツイー
+					script.
+						!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+		scrip(src='https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/js/kube.min.js')
+		script(src='index.js')

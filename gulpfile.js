@@ -5,9 +5,6 @@ const notify = require('gulp-notify');
 const pug = require('gulp-pug');
 const path = require('path');
 const autoprefixer = require('gulp-autoprefixer');
-const browserify = require('browserify');
-const babelify = require('babelify');
-const source = require('vinyl-source-stream');
 const webserver = require('gulp-webserver');
 
 const src = 'src/**/';
@@ -18,15 +15,6 @@ gulp.task('sass', () => {
 		.pipe(plumber({ errorHandler: notify.onError('<%= error.message %>') }))
 		.pipe(sass.sync())
 		.pipe(autoprefixer())
-		.pipe(gulp.dest(dst));
-});
-
-gulp.task('script', () => {
-	browserify(path.join(src, 'index.js'), { debug: true })
-		.transform(babelify, { presets: ['es2015'] })
-		.bundle()
-		.on('error', (err) => console.log(`Error : ${err.message}`))
-		.pipe(source('index.js'))
 		.pipe(gulp.dest(dst));
 });
 
@@ -49,10 +37,8 @@ gulp.task('webserver', () => {
 gulp.task('watch', () => {
 	gulp.run('webserver');
 	gulp.run('sass');
-	//gulp.run('script');
 	gulp.run('pug');
 	gulp.watch(path.join(src, '*.scss'), ['sass']);
-	//gulp.watch(path.join(src, '*.js'), ['script']);
 	gulp.watch(path.join(src, '*.pug'), ['pug']);
 });
 
