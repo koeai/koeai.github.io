@@ -4,7 +4,7 @@ $.ajax({
 	dataType: 'json',
 }).then(({ feed: { entry } }) => {
 	const length = entry.length / 4;
-	const $news = document.querySelector('.news');
+	const $news = document.querySelector('.news > ul');
 	for (let i = 1; i < length; i += 1) {
 		const $li = document.createElement('li');
 		const date = entry[i * 4].content.$t;
