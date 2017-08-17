@@ -1,0 +1,42 @@
+- const title = 'こえあい@そふぃあ 活動履歴';
+- const description = `こえあい＠そふぃあの活動履歴`;
+html
+	head
+		meta(charset='utf-8')
+		title=title
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		meta(property='og:title' content=title)
+		meta(property='og:site_name' content=title)
+		meta(property="og:description" content=description)
+		meta(property='og:type' content='website')
+		meta(property='og:image' content='/images/icon.jpeg')
+		meta(name='twitter:card' content='summary')
+		meta(name='twitter:site' content='@koeai_sophia')
+		meta(name='twitter:title' content=title)
+		meta(name='twitter:description' content=description)
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.css')
+		link(rel='stylesheet' href='index.css')
+	body
+		include ../../shared/nav.pug
+		main
+			h2 こえあい@そふぃあ 活動履歴
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+		scrip(src='https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/js/kube.min.js')
+		script.
+			window.twttr = (function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0],
+				t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+
+			t._e = [];
+			t.ready = function(f) {
+				t._e.push(f);
+			};
+
+			return t;
+			}(document, "script", "twitter-wjs"));
+		script(src='index.js')

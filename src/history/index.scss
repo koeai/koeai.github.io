@@ -1,0 +1,9 @@
+@import '../../shared/util.scss';
+
+main {
+	@include content;
+}
+
+nav {
+	@include nav;
+}

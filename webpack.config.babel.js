@@ -3,7 +3,7 @@ import libpath from 'path';
 
 const { UglifyJsPlugin, AggressiveMergingPlugin } = optimize;
 const target = '';
-const dst = './';
+const dst = libpath.join('./', target);
 let { env: { NODE_ENV, WATCH } } = process;
 
 if (!NODE_ENV) {
@@ -30,18 +30,18 @@ if (isProduction) {
 	);
 }
 
-const context = libpath.join(__dirname, target, 'src');
+const context = libpath.join(__dirname, 'src', target);
 
 const config = {
 	entry: context,
 	output: {
-		path: libpath.join(__dirname, target, dst),
+		path: libpath.join(__dirname, dst),
 		filename: 'index.js'
 	},
 	module: {
 		rules: [
 			{
-				test: /\.(js|jsx)$/,
+				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
@@ -53,7 +53,7 @@ const config = {
 		]
 	},
 	resolve: {
-		extensions: ['.js', '.jsx']
+		extensions: ['.js']
 	},
 	plugins
 };
@@ -63,7 +63,7 @@ if (WATCH) {
 		entry: [
 			'webpack-dev-server/client?http://0.0.0.0:3000',
 			'webpack/hot/only-dev-server',
-			libpath.join(__dirname, 'src/')
+			context
 		],
 		devServer: {
 			hot: true,

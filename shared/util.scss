@@ -1,0 +1,30 @@
+@mixin content {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 16px;
+
+	@media (max-width: 960px) {
+		width: 100%;
+		padding: 0 16px;
+	}
+}
+
+@mixin nav {
+	ul {
+		display: flex;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+		display: inline-block;
+		padding: 4px 8px;
+		opacity: 0.8;
+
+		&:hover {
+			opacity: 1;
+			color: inherit;
+		}
+	}
+}
