@@ -13,8 +13,42 @@ main {
 .news {
 	max-height: 420px;
 	overflow-y: scroll;
+	border: 1px solid rgb(146, 146, 146);
+	padding: 8px 16px;
+	box-sizing: border-box;
 }
 
 nav {
 	@include nav;
+}
+
+h2 {
+	> span {
+		padding: 0 16px;
+		color: white;
+	}
+}
+
+#about {
+	> span {
+		background-color: rgb(28, 164, 252);
+	}
+}
+
+#event {
+	> span {
+		background-color: rgb(101, 214, 67);
+	}
+}
+
+#contact {
+	> span {
+		background-color: rgb(252, 101, 84);
+	}
+}
+
+#news {
+	> span {
+		background-color: rgb(146, 146, 146);
+	}
 }

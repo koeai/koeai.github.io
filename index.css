@@ -15,7 +15,11 @@ main {
 
 .news {
   max-height: 420px;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  border: 1px solid #929292;
+  padding: 8px 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 nav ul {
   display: -webkit-box;
@@ -31,3 +35,19 @@ nav a {
   nav a:hover {
     opacity: 1;
     color: inherit; }
+
+h2 > span {
+  padding: 0 16px;
+  color: white; }
+
+#about > span {
+  background-color: #1ca4fc; }
+
+#event > span {
+  background-color: #65d643; }
+
+#contact > span {
+  background-color: #fc6554; }
+
+#news > span {
+  background-color: #929292; }
