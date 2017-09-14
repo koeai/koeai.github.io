@@ -14,7 +14,7 @@ main {
       padding: 0 16px; } }
 
 .news {
-  max-height: 420px;
+  max-height: 330px;
   overflow-y: scroll;
   border: 1px solid #929292;
   padding: 8px 16px;
