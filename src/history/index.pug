@@ -1,19 +1,8 @@
-- const title = 'こえあい@そふぃあ 活動履歴';
-- const description = `こえあい＠そふぃあの活動履歴`;
+doctype html
 html
 	head
-		meta(charset='utf-8')
-		title=title
-		meta(name='viewport' content='width=device-width, initial-scale=1')
-		meta(property='og:title' content=title)
-		meta(property='og:site_name' content=title)
-		meta(property="og:description" content=description)
-		meta(property='og:type' content='website')
-		meta(property='og:image' content='/assets/icon.jpeg')
-		meta(name='twitter:card' content='summary')
-		meta(name='twitter:site' content='@koeai_sophia')
-		meta(name='twitter:title' content=title)
-		meta(name='twitter:description' content=description)
+		include ../../shared/meta.pug
+		+meta('こえあい@そふぃあ 活動履歴', 'こえあい＠そふぃあの活動履歴')
 		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.css')
 		link(rel='stylesheet' href='index.css')
 	body
