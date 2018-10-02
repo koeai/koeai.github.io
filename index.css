@@ -51,3 +51,7 @@ h2 > span {
 
 #news > span {
   background-color: #929292; }
+
+.events img {
+  width: 80%;
+  display: block; }
