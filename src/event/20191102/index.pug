@@ -1,0 +1,80 @@
+- const title = '小岩井ことりトークショー～IQ世界上位２％の私が上智大学でも無双するそうですよ？~'
+doctype html
+html
+	head
+		include ../../../shared/meta.pug
+		+meta(title, '小岩井ことりトークショーの特設サイト')
+		link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300,400')
+		link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.min.css')
+		link(rel='stylesheet' href='./index.css')
+	body
+		div(data-component='sticky')
+			nav
+				div
+					a(href='/') Home
+					a(href='#about') About
+					a(href='#ticket') Ticket
+					a(href='#access') Access
+					a(href='#notes') Notes
+					a(href='#contact') Contact
+		img(src='/assets/event/20191102/header.jpg' alt='logo')
+		main
+			h1#about.ha About
+			div.row.gutters
+				div.col.col-5
+					img(src='/assets/event/20191102/guest.jpg' alt='pc-actor')
+				div.col.col-7
+					h2 タイトル
+					p= title
+						| 
+						a.twitter-share-button(href='https://twitter.com/share' data-via='koeai_sophia') Tweet
+						script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+					h2 出演者
+					div
+						p
+							span.big 小岩井ことり
+							| 
+							a.twitter-follow-button(href='https://twitter.com/koiwai_kotori') Follow @koiwai_kotori
+							img(src='/assets/event/20181104/guest.jpg' alt='sp-actor')
+					h2 プロフィール・出演作品
+					p.
+						声優、作詞家、作曲家。MIDI検定1級、講師資格も所持。
+						声優としてTVアニメやゲームなど幅広く活躍する一方、
+						作詞作曲家としてのメジャーデビュー作品では、オリコンアニメアルバムランキングで1位を獲得。
+						全人口の2%のみが入ることの出来る高IQ団体であるMENSAの会員。
+					p.
+						「のんのんびより」宮内れんげ、「七つの大罪」エレイン
+						「アイドルマスター ミリオンライブ! シアターデイズ」天空橋朋花、「白猫プロジェクト」フランほか多数。
+					h2 開催日時・場所
+					p 2019年11月2日(土)　上智大学四ツ谷キャンパス紀尾井坂ビル B210
+					p 開場12時00分　開演12時30分　終演13時50分#[br]時間は多少前後する可能性がございます。予めご了承ください。
+			div
+				h1#ticket.hb Ticket
+				ul
+					li 受付: #[a(href='https://t.livepocket.jp/e/2019koeai_event') https://t.livepocket.jp/e/2019koeai_event]
+					li 料金: 2000円
+					li 受付期間: 2019年9月16日（月）18時～2019年9月23日（月）21時まで
+					li 当選発表: 2019年9月25日（水）
+					li 入金期間: 2019年9月25日（水）～2019年10月2日（水）まで
+			div
+				h2 注意事項
+				ul
+					li 座席は抽選販売となりますので受付期間内にお申し込みください。
+					li イベント当日、身分確認ができる写真付き身分証（運転免許証、学生証、写真付き住基カード等）とLivePocketのご自身のアカウントページが表示できる機器、またはチケットページを印刷したものを忘れずに持参ください。
+
+				h1#access.ha Access
+				iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7767226502983!2d139.7311387152588!3d35.682499380193995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd59d9eba882319b6!2z5LiK5pm65aSn5a2m!5e0!3m2!1sja!2sus!4v1471080013772' width='100%' height='200' frameborder='0' style='border:0' allowfullscreen)
+				p 上智大学四ツ谷キャンパス紀尾井坂ビル B210教室#[br]JR中央線、東京メトロ丸ノ内線・南北線/四ッ谷駅　麹町口・赤坂口から徒歩5分
+				h2#notes.hb Notes
+				ul
+					li イベントに関して株式会社ピアレスガーベラ様、および上智大学へのお問い合わせはご遠慮ください。 
+					li お客様による撮影、録音などの記録行為は一切お断りさせていただきます。 
+					li 公演中の座席の移動、食事、喫煙、危険物の持ち込みなど、他のお客様にご迷惑となる行為はお断りさせていただきます。 
+					li 演にあたり、小岩井さん宛にお手紙、またはプレゼント等ご用意されるお客様は、受付にてスタッフにお渡しください。イベント終了後に小岩井さんの下にお渡しします。 
+					li イベント当日はスタッフの指示に従うようお願いいたします。指示に従わない場合退場していただくことがございます。 
+					li 設備などを破損された場合、実費を請求させていただくことがございます。
+				h1#contact.ha Contact
+				p ご質問等ございましたら、下記のメールアドレスへお願いします。#[br]上智大学公認サークルこえあい＠そふぃあ　koeai.sophia(at)gmail.com（“(at)”をアットマークに変更して下さい）#[br]上智大学及び所属事務所様への直接のお問い合わせはご遠慮ください。
+			footer © 2019 koeai@sophia
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/js/kube.min.js')
